@@ -90,42 +90,7 @@ https://img.shields.io/badge/License-MIT-yellow
 
 ## Структура проекта
 
-autoservice/
-├── autoservice_backend/          # Django проект
-│   ├── settings.py               # Настройки (CORS, JWT, REST)
-│   ├── urls.py                   # Главные URL
-│   └── wsgi.py
-│
-├── technical_logbook/            # Основное Django-приложение
-│   ├── models.py                 # Модели данных
-│   ├── views.py                  # API ViewSets + прогноз ТО
-│   ├── serializers.py            # DRF сериализаторы
-│   ├── admin.py                  # Админка с импортом
-│   ├── admin_views.py            # Views для импорта и массовых операций
-│   ├── forms.py                  # Формы импорта
-│   ├── urls.py                   # API роутер
-│   └── templates/admin/          # Шаблоны админки
-│
-├── autoservice_frontend/         # React фронтенд (Vite)
-│   ├── src/
-│   │   ├── api/api.js            # Axios клиент с JWT
-│   │   ├── components/
-│   │   │   ├── CarDetails/       # Страница авто + плоттер
-│   │   │   ├── CarForm/          # Форма добавления авто
-│   │   │   ├── CarList/          # Список автомобилей
-│   │   │   ├── Dashboard/        # Главная панель
-│   │   │   ├── Login/            # Страница входа
-│   │   │   ├── LogoutButton/     # Кнопка выхода
-│   │   │   ├── MaintenanceRecordForm/  # Форма создания ТО
-│   │   │   └── ProtectedRoute/   # Защита маршрутов
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-│
-├── autoservice_parts.xlsx        # Пример импорта запчастей
-├── autoservice_maintenance.xlsx  # Пример импорта регламентов
-├── manage.py
-└── README.md
+![Структура проекта](assets/stucture.png)
 
 ## 🚀 Установка и запуск
 
