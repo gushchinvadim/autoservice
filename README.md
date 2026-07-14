@@ -1,9 +1,9 @@
 # 🔧 АвтоСервис — Система учёта технического обслуживания автомобилей
 
-https://www.python.org/?spm=a2ty_o01.29997173.0.0.399555fbzWaN6u
-https://www.djangoproject.com/?spm=a2ty_o01.29997173.0.0.399555fbzWaN6u
-https://react.dev/?spm=a2ty_o01.29997173.0.0.399555fbzWaN6u
-https://img.shields.io/badge/License-MIT-yellow
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.2-green)](https://www.djangoproject.com/)
+[![React](https://img.shields.io/badge/React-18-blue)](https://react.dev/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 АвтоСервис — это полнофункциональное веб-приложение для учёта технического обслуживания автомобилей.
 Система позволяет вести историю ТО, прогнозировать следующие обслуживания, рассчитывать стоимость запчастей и работ,
