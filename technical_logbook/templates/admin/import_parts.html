@@ -1,0 +1,37 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="content-main">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <fieldset class="module aligned">
+            <div class="form-row">
+                {{ form.excel_file.label_tag }}
+                {{ form.excel_file }}
+                {% if form.excel_file.help_text %}
+                <p class="help">{{ form.excel_file.help_text }}</p>
+                {% endif %}
+            </div>
+        </fieldset>
+
+        <div class="submit-row">
+            <input type="submit" value="Импортировать" class="default" />
+            <a href="{% url 'admin:index' %}" class="button">Отмена</a>
+        </div>
+    </form>
+
+    <h2>Формат файла</h2>
+    <p>Excel файл должен содержать следующие колонки:</p>
+    <ul>
+        <li><strong>name</strong> - Название запчасти (обязательно)</li>
+        <li><strong>manufacturer</strong> - Производитель (обязательно)</li>
+        <li><strong>category</strong> - Категория (oil, filter, electrical, engine, transmission, suspension, other)</li>
+        <li><strong>expected_lifespan_km</strong> - Ожидаемый ресурс в км (необязательно)</li>
+        <li><strong>expected_lifespan_months</strong> - Ожидаемый ресурс в месяцах (необязательно)</li>
+        <li><strong>unit</strong> - Единица измерения (pcs, liters, kg, set, meters)</li>
+        <li><strong>current_price</strong> - Текущая цена за единицу</li>
+    </ul>
+</div>
+{% endblock %}

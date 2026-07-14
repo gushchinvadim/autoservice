@@ -1,0 +1,38 @@
+/* Переопределяем цвет основных кнопок */
+.btn-primary {
+    background-color: #1e3a8a !important;  /* Темно-синий */
+    border-color: #1e3a8a !important;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af !important;  /* Чуть светлее при наведении */
+    border-color: #1e40af !important;
+}
+
+/* Переопределяем цвет ссылок и акцентов */
+/*a {*/
+/*    color: #1e3a8a !important;*/
+/*}*/
+
+/*a:hover {*/
+/*    color: #1e40af !important;*/
+/*}*/
+
+/* Цвет активной вкладки в боковом меню */
+.nav-sidebar .nav-link.active {
+    background-color: #1e3a8a !important;
+}
+
+/* Цвет заголовков и брендинга */
+/*.brand-link {*/
+/*    background-color: #1e3a8a !important;*/
+/*}*/
+
+/*!* Цвет кнопок сохранения в формах *!*/
+/*.submit-row .default {*/
+/*    background: #1e3a8a !important;*/
+/*}*/
+
+/*.submit-row .default:hover {*/
+/*    background: #1e40af !important;*/
+/*}*/

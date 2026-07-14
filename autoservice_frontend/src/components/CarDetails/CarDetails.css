@@ -1,0 +1,547 @@
+.car-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #2980b9;
+}
+
+.car-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.car-header h1 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.car-meta {
+    display: flex;
+    gap: 15px;
+}
+
+.vin, .plate {
+    font-family: monospace;
+    background: #f8f9fa;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.car-info-section, .forecast-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.car-info-section h2, .forecast-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item .label {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-item .value {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.forecast-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.summary-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tasks-section, .parts-section {
+    margin: 25px 0;
+}
+
+.tasks-section h3, .parts-section h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.task-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.task-system {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.task-cost {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.parts-table th, .parts-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.parts-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.parts-table td.total, .parts-table th:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.forecast-total {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.total-row.grand-total {
+    border-top: 2px solid #3498db;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.total-row.grand-total span:last-child {
+    color: #27ae60;
+}
+
+/* --- Красивая кнопка добавления ТО --- */
+.btn-add-record {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Расстояние между плюсом и текстом */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 
+                0 2px 4px -1px rgba(37, 99, 235, 0.1);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 15px; /* Отступ сверху, если кнопка под заголовком */
+}
+
+/* Эффект при наведении: кнопка слегка "всплывает" и тень становится глубже */
+.btn-add-record:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 
+                0 4px 6px -2px rgba(37, 99, 235, 0.15);
+}
+
+/* Эффект при нажатии: кнопка возвращается на место */
+.btn-add-record:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Стилизация самого значка плюса */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.2);
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+}
+
+/* Журнал ТО - Временная шкала */
+.maintenance-history-section {
+    margin-top: 40px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: white;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-marker::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 2px;
+}
+
+.timeline-mileage {
+    display: block;
+    font-size: 11px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.timeline-content {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.timeline-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.timeline-cost {
+    font-size: 20px;
+    font-weight: bold;
+    color: #10b981;
+}
+
+.timeline-tasks, .timeline-parts {
+    margin: 15px 0;
+}
+
+.timeline-tasks h4, .timeline-parts h4 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tasks-list-small {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tasks-list-small li {
+    padding: 8px 12px;
+    background: #f8fafc;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.task-cost-small {
+    font-weight: 600;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.parts-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.part-item-small {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border-left: 3px solid #3b82f6;
+}
+
+.part-name {
+    display: block;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.part-manufacturer {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.part-quantity, .part-price {
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+.part-price {
+    font-weight: 600;
+    color: #10b981;
+}
+
+.timeline-notes {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #92400e;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.empty-history p {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* --- Плоттер замен (Матрица) --- */
+.maintenance-history-section {
+    margin-top: 40px;
+}
+
+.plotter-wrapper {
+    overflow-x: auto; /* Горизонтальная прокрутка, если ТО много */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+    max-height: 600px; /* Вертикальная прокрутка, если элементов много */
+    overflow-y: auto;
+    position: relative;
+}
+
+.plotter-table {
+    width: 100%;
+    border-collapse: separate; /* Необходимо для sticky */
+    border-spacing: 0;
+    min-width: 800px;
+}
+
+.plotter-table th, .plotter-table td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #f1f5f9;
+}
+
+/* Прилипающий первый столбец (Названия элементов) */
+.sticky-col {
+    position: sticky;
+    left: 0;
+    background: #f8fafc;
+    z-index: 20;
+    text-align: left;
+    font-weight: 600;
+    color: #0f172a;
+    border-right: 2px solid #cbd5e1 !important;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Прилипающая шапка (Даты ТО) */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: #f1f5f9;
+    z-index: 15;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 2px solid #cbd5e1 !important;
+}
+
+/* Угол пересечения прилипающих элементов должен быть выше всех */
+th.sticky-col.sticky-header {
+    z-index: 25;
+    background: #e2e8f0;
+}
+
+.to-header-name {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.to-header-date {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.item-name-cell {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ячейка, где была замена */
+.changed-cell {
+    background-color: #dcfce7 !important; /* Светло-зеленый */
+    color: #166534;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.changed-cell:hover {
+    background-color: #bbf7d0 !important;
+    cursor: help;
+}
+
+/* Пустая ячейка */
+.empty-cell {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* Адаптация пустой истории */
+.empty-history {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.empty-history p {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
