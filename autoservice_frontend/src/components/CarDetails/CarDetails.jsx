@@ -249,7 +249,7 @@ function CarDetails() {
                                             <td className="sticky-col item-name-cell">{itemName}</td>
                                             {sortedHistory.map(record => {
                                                 // Определяем тип элемента
-                                                const isPart = itemName.startsWith('');
+                                                
                                                 const cleanName = itemName.substring(2).trim();
                                                 
                                                 // Приводим к нижнему регистру и убираем пробелы для надежного сравнения

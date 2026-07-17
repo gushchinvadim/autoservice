@@ -11,7 +11,7 @@ function Dashboard() {
         totalSpentThisMonth: 0
     });
     const [recentRecords, setRecentRecords] = useState([]);
-    const [upcomingCars, setUpcomingCars] = useState([]);
+
     const [overdueCars, setOverdueCars] = useState([]); // <-- Явно объявляем состояние
     const [loading, setLoading] = useState(true);
 

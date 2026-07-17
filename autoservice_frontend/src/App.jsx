@@ -11,7 +11,7 @@ import { DJANGO_ADMIN_URL } from './config/config';
 import './App.css';
 
 function App() {
-    const isLoggedIn = localStorage.getItem('access_token');
+   
 
     return (
         <Router>

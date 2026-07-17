@@ -139,8 +139,6 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
-from datetime import timedelta
-
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -163,9 +161,33 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
+# ==================== CORS НАСТРОЙКИ ====================
+# Читаем из .env файла
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vite по умолчанию
-    "http://127.0.0.1:5173",
+    origin.strip()
+    for origin in config('CORS_ALLOWED_ORIGINS', default='').split(',')
+    if origin.strip()
+]
+# Разрешённые методы и заголовки
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -198,57 +220,75 @@ else:
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# JAZZMIN_SETTINGS = {
-#     "site_title": "АвтоСервис",
-#     "site_header": "АвтоСервис",
-#     "site_brand": "🔧 АвтоСервис",
-#     "welcome_sign": "Добро пожаловать в систему учета ТО",
-#     "search_model": ["technical_logbook.Car", "technical_logbook.SparePart"],
-#     "topmenu_links": [
-#         {"name": "Главная", "url": "admin:index"},
-#     ],
-#     "show_sidebar": True,
-#     "navigation_expanded": True,
-#     "icons": {
-#         "technical_logbook.car": "fas fa-car",
-#         "technical_logbook.sparepart": "fas fa-cogs",
-#         "technical_logbook.maintenancetask": "fas fa-wrench",
-#         "technical_logbook.maintenancerecord": "fas fa-clipboard-list",
-#         "technical_logbook.taskrequiredpart": "fas fa-list-ol",
-#     },
-#     "default_icon_parents": "fas fa-chevron-circle-right",
-#     "default_icon_children": "fas fa-circle",
-#     "custom_css": "admin/css/custom_jazzmin.css",
-# }
-#
-# JAZZMIN_UI_TWEAKS = {
-#     "navbar_small_text": False,
-#     "footer_small_text": False,
-#     "body_small_text": False,
-#     "brand_small_text": False,
-#     "brand_colour": "navbar-indigo",
-#     "accent": "accent-secondary",
-#     "navbar": "navbar-white navbar-light",
-#     "no_navbar_border": False,
-#     "navbar_fixed": True,
-#     "layout_boxed": False,
-#     "footer_fixed": False,
-#     "sidebar_fixed": True,
-#     "sidebar": "sidebar-dark-primary",
-#     "sidebar_nav_small_text": False,
-#     "sidebar_disable_expand": False,
-#     "sidebar_nav_child_indent": False,
-#     "sidebar_nav_compact_style": False,
-#     "sidebar_nav_legacy_style": False,
-#     "sidebar_nav_flat_style": False,
-#     "theme": "default",
-#     "dark_mode_theme": None,
-#     "button_classes": {
-#         "primary": "btn-primary",
-#         "secondary": "btn-secondary",
-#         "info": "btn-info",
-#         "warning": "btn-warning",
-#         "danger": "btn-danger",
-#         "success": "btn-success",
-#     },
-# }
+# ==================== COOKIE НАСТРОЙКИ ====================
+if DEBUG:
+    # Для разработки — всё отключаем
+    CSRF_COOKIE_HTTPONLY = False
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_SAMESITE = 'Lax'
+
+    # 🔹 ВАЖНО: отключаем SSL redirect для локальной разработки
+    SECURE_SSL_REDIRECT = False
+else:
+    # Для продакшена (HTTPS)
+    CSRF_COOKIE_HTTPONLY = False
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_SAMESITE = 'Lax'
+
+    # Дополнительные настройки безопасности для продакшена
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# ==================== LOGGING ====================
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} [{module}] {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'django.log',
+            'formatter': 'verbose',
+            'encoding': 'utf-8',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'api': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}

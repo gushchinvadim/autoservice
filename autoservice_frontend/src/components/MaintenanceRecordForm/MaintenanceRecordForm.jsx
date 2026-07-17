@@ -12,7 +12,7 @@ function MaintenanceRecordForm() {
     const [parts, setParts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const { register, control, handleSubmit, watch, setValue, getValues } = useForm({
+    const { register, control, handleSubmit, watch, setValue } = useForm({
         defaultValues: {
             date_performed: new Date().toISOString().split('T')[0],
             mileage_at_service: 0,
