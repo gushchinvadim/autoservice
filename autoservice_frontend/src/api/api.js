@@ -62,8 +62,8 @@ api.interceptors.response.use(
             }
 
             try {
-                // Запрашиваем новый токен
-                const response = await axios.post('http://127.0.0.1:8000/api/token/refresh/', {
+                // 🔹 ИСПРАВЛЕНО: Используем API_BASE_URL вместо жесткого 127.0.0.1:8000
+                const response = await axios.post(`${API_BASE_URL}token/refresh/`, {
                     refresh: refreshToken
                 });
 
