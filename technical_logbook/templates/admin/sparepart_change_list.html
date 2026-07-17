@@ -1,9 +1,10 @@
+<!--technical_logbook/templates/admin/sparepart_change_list.html-->
 {% extends "admin/change_list.html" %}
 {% load i18n %}
 
 {% block object-tools-items %}
     <li>
-        <a href="/import/parts/" class="grp-button">
+        <a href="{% url 'import_parts' %}" class="grp-button">
             📥 Импорт запчастей из Excel
         </a>
     </li>

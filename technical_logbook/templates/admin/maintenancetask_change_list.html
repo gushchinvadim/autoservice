@@ -1,9 +1,10 @@
+<!--technical_logbook/templates/admin/maintenancetask_change_list.html-->
 {% extends "admin/change_list.html" %}
 {% load i18n %}
 
 {% block object-tools-items %}
     <li>
-        <a href="/import/maintenance/" class="grp-button">
+        <a href="{% url 'import_maintenance' %}" class="grp-button">
             📥 Импорт регламентов из Excel
         </a>
     </li>

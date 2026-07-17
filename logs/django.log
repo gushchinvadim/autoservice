@@ -12,3 +12,4 @@ INFO 2026-07-17 11:34:47,913 [autoreload] Watching for file changes with StatRel
 INFO 2026-07-17 11:35:56,716 [autoreload] /Users/vadimgushchin/Desktop/Djangoprojects/autoservice/autoservice_backend/urls.py changed, reloading.
 INFO 2026-07-17 11:35:56,971 [autoreload] Watching for file changes with StatReloader
 INFO 2026-07-17 11:38:03,106 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-17 12:09:42,677 [autoreload] Watching for file changes with StatReloader

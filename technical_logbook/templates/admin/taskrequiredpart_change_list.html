@@ -1,8 +1,9 @@
+<!--technical_logbook/templates/admin/taskrequiredpart_change_list.html-->
 {% extends "admin/change_list.html" %}
 
 {% block object-tools-items %}
     <li>
-        <a href="/bulk-add-norms/" class="grp-button">
+        <a href="{% url 'bulk_add_norms' %}" class="grp-button">
             ⚡ Массовое добавление нормативов
         </a>
     </li>

@@ -1,3 +1,4 @@
+# technical_logbook/admin_views.py
 import pandas as pd
 from django.shortcuts import render, redirect
 from django.contrib import messages
