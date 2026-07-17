@@ -192,6 +192,10 @@ CORS_ALLOW_HEADERS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://autoservice.gvedynamics.ru',
+    'https://www.autoservice.gvedynamics.ru'
+]
 # ==================== COOKIE НАСТРОЙКИ ====================
 if DEBUG:
     # Для разработки — всё отключаем

@@ -1,0 +1,14 @@
+INFO 2026-07-17 11:08:35,599 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-17 11:08:37,769 [basehttp] "GET / HTTP/1.1" 301 0
+INFO 2026-07-17 11:08:37,774 [basehttp] code 400, message Bad request version ('j©\x00*zz\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-17 11:08:37,774 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-17 11:08:37,776 [basehttp] code 400, message Bad request version ('T\x8f\x88&°\x9fh<\x8bÃj\x88!ï\x9aL\x98sU\x9a\x16ß~&õ/\x96\\wúGv\x00*::\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-17 11:08:37,776 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-17 11:08:37,777 [basehttp] code 400, message Bad request version ('^ã\x8a¨Eèþ\x00***\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-17 11:08:37,777 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-17 11:08:37,778 [basehttp] code 400, message Bad request version ('Ê©´\x9d\x11MîÍT°\x8c\x115jÓÊæÜ\x00*ÚÚ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-17 11:08:37,778 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-17 11:34:47,913 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-17 11:35:56,716 [autoreload] /Users/vadimgushchin/Desktop/Djangoprojects/autoservice/autoservice_backend/urls.py changed, reloading.
+INFO 2026-07-17 11:35:56,971 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-17 11:38:03,106 [autoreload] Watching for file changes with StatReloader
