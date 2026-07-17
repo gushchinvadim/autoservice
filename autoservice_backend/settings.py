@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = config('DEBUG', default=False, cast=bool) # на продакшн
+# DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool) # на продакшн
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
@@ -170,24 +170,33 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-#
-# # CORS_ALLOW_ALL_ORIGINS = True # для разработки
-# # на продакшене установить:
-# # CORS_ALLOW_ALL_ORIGINS = False  # всегда False в продакшене!
-# # CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='').split(',')
-#
-# # Убедитесь, что кука помечена как "сайтовая"
-# SESSION_COOKIE_SECURE = True        # только по HTTPS
-# SESSION_COOKIE_SAMESITE = 'Lax'     # разрешает отправку при переходе из того же сайта
-# CSRF_COOKIE_SECURE = True
-# CSRF_COOKIE_SAMESITE = 'Lax'
-# if DEBUG:
-#     CSRF_COOKIE_HTTPONLY = False
-#     CSRF_COOKIE_SECURE = False
-#     SESSION_COOKIE_SECURE = False
-#     # И самое важное — явно разрешить SameSite в Safari:
-#     CSRF_COOKIE_SAMESITE = 'Lax'
-#     SESSION_COOKIE_SAMESITE = 'Lax'
+# ==================== COOKIE НАСТРОЙКИ ====================
+if DEBUG:
+    # Для разработки — всё отключаем
+    CSRF_COOKIE_HTTPONLY = False
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_SAMESITE = 'Lax'
+
+    # 🔹 ВАЖНО: отключаем SSL redirect для локальной разработки
+    SECURE_SSL_REDIRECT = False
+else:
+    # Для продакшена (HTTPS)
+    CSRF_COOKIE_HTTPONLY = False
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_SAMESITE = 'Lax'
+
+    # Дополнительные настройки безопасности для продакшена
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # JAZZMIN_SETTINGS = {
 #     "site_title": "АвтоСервис",
