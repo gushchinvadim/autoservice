@@ -198,90 +198,109 @@ function CarDetails() {
                 </div>
             )}
 
-            {/* Журнал ТО - Плоттер (Матрица замен) */}
+            {/* Журнал ТО */}
             <div className="maintenance-history-section">
-                <h2>📊 Плоттер замен (История обслуживания)</h2>
+                <h2>📊 История обслуживания</h2>
                 
                 {maintenanceHistory && maintenanceHistory.length > 0 ? (
-                    <div className="plotter-wrapper">
-                        <table className="plotter-table">
-                            <thead>
-                                <tr>
-                                    <th className="sticky-col sticky-header">Элемент / Запчасть</th>
-                                    {/* Сортируем ТО по возрастанию пробега (слева направо) */}
-                                    {[...maintenanceHistory]
-                                        .sort((a, b) => a.mileage_at_service - b.mileage_at_service)
-                                        .map(record => (
-                                            <th key={record.id} className="sticky-header">
-                                                <div className="to-header-name">
-                                                    {getToName(record)}
+                    <>
+                        {/* === ВАРИАНТ ДЛЯ МОБИЛЬНЫХ (Карточки) === */}
+                        <div className="mobile-timeline">
+                            {[...maintenanceHistory]
+                                .sort((a, b) => b.mileage_at_service - a.mileage_at_service) // Сначала свежие
+                                .map(record => (
+                                    <div key={record.id} className="timeline-card">
+                                        <div className="timeline-card-header">
+                                            <span className="to-badge">{getToName(record)}</span>
+                                            <span className="to-date">{new Date(record.date_performed).toLocaleDateString('ru-RU')}</span>
+                                        </div>
+                                        <div className="timeline-card-mileage">
+                                            Пробег: {record.mileage_at_service?.toLocaleString('ru-RU')} км
+                                        </div>
+                                        
+                                        <div className="timeline-card-details">
+                                            {record.tasks_display && record.tasks_display.length > 0 && (
+                                                <div className="detail-block">
+                                                    <span className="detail-label">⚙️ Работы:</span>
+                                                    <ul className="detail-list">
+                                                        {record.tasks_display.map((t, i) => (
+                                                            <li key={i}>{t.name}</li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
-                                                <div className="to-header-date">
-                                                    {new Date(record.date_performed).toLocaleDateString('ru-RU')}
+                                            )}
+                                            
+                                            {record.used_parts_display && record.used_parts_display.length > 0 && (
+                                                <div className="detail-block">
+                                                    <span className="detail-label">🔧 Запчасти:</span>
+                                                    <ul className="detail-list">
+                                                        {record.used_parts_display.map((p, i) => (
+                                                            <li key={i}>{p.part_name} ({p.quantity} {p.unit})</li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
-                                            </th>
-                                        ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {(() => {
-                                    // 1. Собираем все уникальные названия запчастей и работ из всей истории
-                                    const uniqueItems = new Set();
-                                    maintenanceHistory.forEach(record => {
-                                        if (record.used_parts_display) {
-                                            record.used_parts_display.forEach(p => uniqueItems.add(`🔧 ${p.part_name}`));
-                                        }
-                                        if (record.tasks_display) {
-                                            record.tasks_display.forEach(t => uniqueItems.add(`⚙️ ${t.name}`));
-                                        }
-                                    });
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
 
-                                    // 2. Превращаем в отсортированный массив для строк
-                                    const rows = Array.from(uniqueItems).sort();
+                        {/* === ВАРИАНТ ДЛЯ ДЕСКТОПА (Плоттер / Матрица) === */}
+                        <div className="plotter-wrapper">
+                            <table className="plotter-table">
+                                <thead>
+                                    <tr>
+                                        <th className="sticky-col sticky-header">Элемент / Запчасть</th>
+                                        {[...maintenanceHistory]
+                                            .sort((a, b) => a.mileage_at_service - b.mileage_at_service)
+                                            .map(record => (
+                                                <th key={record.id} className="sticky-header">
+                                                    <div className="to-header-name">{getToName(record)}</div>
+                                                    <div className="to-header-date">{new Date(record.date_performed).toLocaleDateString('ru-RU')}</div>
+                                                </th>
+                                            ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {(() => {
+                                        const uniqueItems = new Set();
+                                        maintenanceHistory.forEach(record => {
+                                            if (record.used_parts_display) record.used_parts_display.forEach(p => uniqueItems.add(`🔧 ${p.part_name}`));
+                                            if (record.tasks_display) record.tasks_display.forEach(t => uniqueItems.add(`⚙️ ${t.name}`));
+                                        });
+                                        const rows = Array.from(uniqueItems).sort();
+                                        const sortedHistory = [...maintenanceHistory].sort((a, b) => a.mileage_at_service - b.mileage_at_service);
 
-                                    // 3. Отсортированная история для столбцов
-                                    const sortedHistory = [...maintenanceHistory].sort(
-                                        (a, b) => a.mileage_at_service - b.mileage_at_service
-                                    );
-
-                                    return rows.map(itemName => (
-                                        <tr key={itemName}>
-                                            <td className="sticky-col item-name-cell">{itemName}</td>
-                                            {sortedHistory.map(record => {
-                                                // Определяем тип элемента
-                                                
-                                                const cleanName = itemName.substring(2).trim();
-                                                
-                                                // Приводим к нижнему регистру и убираем пробелы для надежного сравнения
-                                                const cleanNameLower = cleanName.toLowerCase();
-                                                
-                                                // Ищем совпадение и в запчастях, и в работах (игнорируя регистр и пробелы)
-                                                const wasChanged = 
-                                                    record.used_parts_display?.some(p => p.part_name.toLowerCase().trim() === cleanNameLower) ||
-                                                    record.tasks_display?.some(t => t.name.toLowerCase().trim() === cleanNameLower);
-
-                                                return (
-                                                    <td key={record.id} className={wasChanged ? 'changed-cell' : 'empty-cell'}>
-                                                        {wasChanged ? new Date(record.date_performed).toLocaleDateString('ru-RU') : '—'}
-                                                    </td>
-                                                );
-                                            })}
-                                        </tr>
-                                    ));
-                                })()}
-                            </tbody>
-                        </table>
-                    </div>
+                                        return rows.map(itemName => (
+                                            <tr key={itemName}>
+                                                <td className="sticky-col item-name-cell">{itemName}</td>
+                                                {sortedHistory.map(record => {
+                                                    const cleanName = itemName.substring(2).trim().toLowerCase();
+                                                    const wasChanged = 
+                                                        record.used_parts_display?.some(p => p.part_name.toLowerCase().trim() === cleanName) ||
+                                                        record.tasks_display?.some(t => t.name.toLowerCase().trim() === cleanName);
+                                                    return (
+                                                        <td key={record.id} className={wasChanged ? 'changed-cell' : 'empty-cell'}>
+                                                            {wasChanged ? new Date(record.date_performed).toLocaleDateString('ru-RU') : '—'}
+                                                        </td>
+                                                    );
+                                                })}
+                                            </tr>
+                                        ));
+                                    })()}
+                                </tbody>
+                            </table>
+                        </div>
+                    </>
                 ) : (
                     <div className="empty-history">
                         <p>История обслуживания пока пуста</p>
                         <Link to={`/cars/${id}/add-record`} className="btn-add-record">
-                            <span className="btn-icon">+</span>
-                            Добавить первую запись о ТО
+                            <span className="btn-icon">+</span> Добавить первую запись о ТО
                         </Link>
                     </div>
                 )}
-            </div>   
+            </div> 
         </div>
     );
 }
