@@ -35,6 +35,8 @@
     border-radius: 8px;
     font-size: 15px;
     transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group input:focus, .form-group select:focus {
@@ -64,6 +66,7 @@
 }
 
 .btn-submit:hover { background: #1d4ed8; }
+
 .btn-cancel {
     background: white;
     color: #64748b;
@@ -72,4 +75,69 @@
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
+}
+
+/* === МОБИЛЬНАЯ АДАПТАЦИЯ (≤ 768px) === */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px 10px;
+    }
+
+    .modern-form {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+
+    /* Превращаем 2 колонки в 1 */
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Увеличиваем размер шрифта для iOS (чтобы не было автозума при фокусе) */
+    .form-group input,
+    .form-group select {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    /* Кнопки в столбик на всю ширину */
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .btn-submit,
+    .btn-cancel {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    /* Кнопка "Отмена" на мобильном — менее заметная */
+    .btn-cancel {
+        background: #f8fafc;
+        color: #64748b;
+    }
+}
+
+/* === ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (≤ 360px) === */
+@media (max-width: 360px) {
+    .form-container {
+        padding: 10px 5px;
+    }
+
+    .modern-form {
+        padding: 15px 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 15px;
+    }
 }
