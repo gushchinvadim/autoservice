@@ -13,3 +13,183 @@ INFO 2026-07-17 11:35:56,716 [autoreload] /Users/vadimgushchin/Desktop/Djangopro
 INFO 2026-07-17 11:35:56,971 [autoreload] Watching for file changes with StatReloader
 INFO 2026-07-17 11:38:03,106 [autoreload] Watching for file changes with StatReloader
 INFO 2026-07-17 12:09:42,677 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-18 07:45:13,847 [autoreload] Watching for file changes with StatReloader
+INFO 2026-07-18 07:45:16,747 [basehttp] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x05å\x01\x00\x05á\x03\x03µzuï\x00Üào¸!f-.&¤±ë]DAÃÎÈà!\x90\x1b5(d\x8dR')
+ERROR 2026-07-18 07:45:16,747 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:16,749 [basehttp] code 400, message Bad request version ('%\x10ßñÉ\x00*')
+ERROR 2026-07-18 07:45:16,749 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:16,749 [basehttp] code 400, message Bad request version ('©B\x84\x00*JJ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:16,750 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:16,750 [basehttp] code 400, message Bad request version ('^èhLå\x80KI\x11Í\x00*JJ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:16,750 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:22,194 [basehttp] code 400, message Bad request version ('0\x95ø¹rö\x93\x87\x00*ÚÚ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:22,194 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:22,195 [basehttp] code 400, message Bad request version ('¤\x15jû#V»\x00*ªª\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:22,196 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:22,197 [basehttp] code 400, message Bad request version ('4ù6<º\x08·¡\x9cíjÈ\x08Ö\x81IB\x86;æÊ\x9a_°\x00*ªª\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:22,197 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:22,198 [basehttp] code 400, message Bad request version ('\x82ii\x81\x97û¡Y\x00F\x88\x9aÏ\x00*\x8a\x8a\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:22,198 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:25,795 [basehttp] code 400, message Bad request version ('-ÄÓ\x00*ÊÊ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:25,795 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:25,797 [basehttp] code 400, message Bad request version ('Ã\x82\x16\x9a¸\x00*ÚÚ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:25,797 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:25,797 [basehttp] code 400, message Bad request version ('×\x13p')
+ERROR 2026-07-18 07:45:25,797 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:25,798 [basehttp] code 400, message Bad request version ('\x00*ZZ\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À')
+ERROR 2026-07-18 07:45:25,798 [basehttp] You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-07-18 07:45:52,253 [autoreload] Watching for file changes with StatReloader
+WARNING 2026-07-18 07:45:54,074 [log] Not Found: /
+WARNING 2026-07-18 07:45:54,074 [basehttp] "GET / HTTP/1.1" 404 3244
+WARNING 2026-07-18 07:45:54,154 [log] Not Found: /apple-touch-icon-precomposed.png
+WARNING 2026-07-18 07:45:54,155 [basehttp] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3358
+WARNING 2026-07-18 07:45:54,156 [log] Not Found: /apple-touch-icon.png
+WARNING 2026-07-18 07:45:54,157 [log] Not Found: /favicon.ico
+WARNING 2026-07-18 07:45:54,158 [log] Not Found: /favicon.ico
+WARNING 2026-07-18 07:45:54,158 [basehttp] "GET /apple-touch-icon.png HTTP/1.1" 404 3322
+WARNING 2026-07-18 07:45:54,158 [basehttp] "GET /favicon.ico HTTP/1.1" 404 3295
+WARNING 2026-07-18 07:45:54,159 [basehttp] "GET /favicon.ico HTTP/1.1" 404 3295
+WARNING 2026-07-18 07:46:01,010 [log] Not Found: /
+WARNING 2026-07-18 07:46:01,011 [basehttp] "GET / HTTP/1.1" 404 3244
+INFO 2026-07-18 07:46:01,817 [basehttp] "GET /admin/technical_logbook/maintenancetask/ HTTP/1.1" 200 43363
+INFO 2026-07-18 07:46:01,839 [basehttp] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-07-18 07:46:01,839 [basehttp] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-07-18 07:46:01,839 [basehttp] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-07-18 07:46:01,840 [basehttp] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2026-07-18 07:46:01,840 [basehttp] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2026-07-18 07:46:01,841 [basehttp] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2026-07-18 07:46:01,841 [basehttp] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-07-18 07:46:01,842 [basehttp] "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2026-07-18 07:46:01,842 [basehttp] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-07-18 07:46:01,843 [basehttp] "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-07-18 07:46:01,843 [basehttp] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-07-18 07:46:01,843 [basehttp] "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-07-18 07:46:01,844 [basehttp] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-07-18 07:46:01,845 [basehttp] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-07-18 07:46:01,846 [basehttp] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2026-07-18 07:46:01,847 [basehttp] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2026-07-18 07:46:01,847 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-18 07:46:01,847 [basehttp] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-07-18 07:46:01,848 [basehttp] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-07-18 07:46:01,848 [basehttp] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-07-18 07:46:01,870 [basehttp] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-07-18 07:46:01,870 [basehttp] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-07-18 07:46:01,871 [basehttp] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2026-07-18 07:46:03,029 [basehttp] "GET /admin/ HTTP/1.1" 200 20349
+INFO 2026-07-18 07:46:03,045 [basehttp] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-07-18 07:46:03,056 [basehttp] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-07-18 07:46:03,514 [basehttp] "GET /admin/ HTTP/1.1" 200 20349
+WARNING 2026-07-18 07:46:24,330 [log] Not Found: /
+WARNING 2026-07-18 07:46:24,331 [basehttp] "GET / HTTP/1.1" 404 3244
+INFO 2026-07-18 07:46:55,039 [basehttp] "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:46:55,203 [basehttp] "POST /api/token/ HTTP/1.1" 200 489
+INFO 2026-07-18 07:46:55,249 [basehttp] "OPTIONS /api/cars/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:46:55,250 [basehttp] "OPTIONS /api/records/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:46:55,274 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-18 07:46:55,333 [basehttp] "GET /api/records/ HTTP/1.1" 200 41742
+INFO 2026-07-18 07:46:55,336 [basehttp] "OPTIONS /api/cars/1/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:46:55,350 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-18 07:46:55,352 [basehttp] "OPTIONS /api/cars/2/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:46:55,367 [basehttp] "GET /api/cars/2/forecast/ HTTP/1.1" 200 2525
+INFO 2026-07-18 07:46:55,369 [basehttp] "OPTIONS /api/cars/3/forecast/ HTTP/1.1" 200 0
+WARNING 2026-07-18 07:46:55,373 [log] Bad Request: /api/cars/3/forecast/
+WARNING 2026-07-18 07:46:55,373 [basehttp] "GET /api/cars/3/forecast/ HTTP/1.1" 400 76
+INFO 2026-07-18 07:46:55,375 [basehttp] "OPTIONS /api/cars/4/forecast/ HTTP/1.1" 200 0
+WARNING 2026-07-18 07:46:55,379 [log] Bad Request: /api/cars/4/forecast/
+WARNING 2026-07-18 07:46:55,379 [basehttp] "GET /api/cars/4/forecast/ HTTP/1.1" 400 76
+INFO 2026-07-18 07:46:58,702 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-18 07:47:02,645 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-18 07:47:02,722 [basehttp] "GET /api/records/ HTTP/1.1" 200 41742
+INFO 2026-07-18 07:47:02,754 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-18 07:47:02,774 [basehttp] "GET /api/cars/2/forecast/ HTTP/1.1" 200 2525
+WARNING 2026-07-18 07:47:02,790 [log] Bad Request: /api/cars/3/forecast/
+WARNING 2026-07-18 07:47:02,790 [basehttp] "GET /api/cars/3/forecast/ HTTP/1.1" 400 76
+WARNING 2026-07-18 07:47:02,807 [log] Bad Request: /api/cars/4/forecast/
+WARNING 2026-07-18 07:47:02,807 [basehttp] "GET /api/cars/4/forecast/ HTTP/1.1" 400 76
+INFO 2026-07-18 07:47:05,319 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-18 07:47:09,838 [basehttp] "OPTIONS /api/cars/1/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:47:09,847 [basehttp] "GET /api/cars/1/ HTTP/1.1" 200 232
+INFO 2026-07-18 07:47:09,885 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-18 07:47:09,887 [basehttp] "OPTIONS /api/records/?car=1 HTTP/1.1" 200 0
+INFO 2026-07-18 07:47:09,947 [basehttp] "GET /api/records/?car=1 HTTP/1.1" 200 21628
+INFO 2026-07-18 07:48:54,321 [basehttp] "GET /api/cars/1/ HTTP/1.1" 200 232
+INFO 2026-07-18 07:48:54,356 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-18 07:48:54,402 [basehttp] "GET /api/records/?car=1 HTTP/1.1" 200 21628
+INFO 2026-07-18 07:48:57,489 [basehttp] "OPTIONS /api/cars/1/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:48:57,500 [basehttp] "GET /api/cars/1/ HTTP/1.1" 200 232
+INFO 2026-07-18 07:48:57,504 [basehttp] "OPTIONS /api/cars/1/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-18 07:48:57,544 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-18 07:48:57,546 [basehttp] "OPTIONS /api/records/?car=1 HTTP/1.1" 200 0
+INFO 2026-07-18 07:48:57,603 [basehttp] "GET /api/records/?car=1 HTTP/1.1" 200 21628
+WARNING 2026-07-19 06:52:57,460 [log] Not Found: /
+WARNING 2026-07-19 06:52:57,461 [basehttp] "GET / HTTP/1.1" 404 3244
+WARNING 2026-07-19 06:52:57,988 [log] Not Found: /apple-touch-icon-precomposed.png
+WARNING 2026-07-19 06:52:57,988 [basehttp] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3358
+WARNING 2026-07-19 06:52:57,990 [log] Not Found: /apple-touch-icon.png
+WARNING 2026-07-19 06:52:57,992 [log] Not Found: /favicon.ico
+WARNING 2026-07-19 06:52:57,992 [basehttp] "GET /favicon.ico HTTP/1.1" 404 3295
+WARNING 2026-07-19 06:52:57,992 [basehttp] "GET /apple-touch-icon.png HTTP/1.1" 404 3322
+INFO 2026-07-19 06:53:06,447 [basehttp] "OPTIONS /api/cars/1/ HTTP/1.1" 200 0
+WARNING 2026-07-19 06:53:06,450 [log] Unauthorized: /api/cars/1/
+WARNING 2026-07-19 06:53:06,450 [basehttp] "GET /api/cars/1/ HTTP/1.1" 401 226
+INFO 2026-07-19 06:53:06,453 [basehttp] "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2026-07-19 06:53:06,466 [basehttp] "POST /api/token/refresh/ HTTP/1.1" 200 489
+INFO 2026-07-19 06:53:06,480 [basehttp] "GET /api/cars/1/ HTTP/1.1" 200 232
+INFO 2026-07-19 06:53:06,482 [basehttp] "OPTIONS /api/cars/1/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-19 06:53:06,515 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-19 06:53:06,517 [basehttp] "OPTIONS /api/records/?car=1 HTTP/1.1" 200 0
+INFO 2026-07-19 06:53:06,576 [basehttp] "GET /api/records/?car=1 HTTP/1.1" 200 21628
+INFO 2026-07-19 06:53:51,641 [basehttp] "GET /admin/technical_logbook/packagetask/ HTTP/1.1" 200 15352
+INFO 2026-07-19 06:53:51,964 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:53:54,044 [basehttp] "GET /admin/technical_logbook/maintenancerecord/ HTTP/1.1" 200 28273
+INFO 2026-07-19 06:53:54,405 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:53:54,416 [basehttp] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2026-07-19 06:53:57,438 [basehttp] "GET /admin/technical_logbook/maintenancerecord/?car__id__exact=1 HTTP/1.1" 200 26325
+INFO 2026-07-19 06:53:57,768 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:13,008 [basehttp] "GET /admin/technical_logbook/sparepart/ HTTP/1.1" 200 41314
+INFO 2026-07-19 06:54:13,402 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:32,881 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/ HTTP/1.1" 200 46756
+INFO 2026-07-19 06:54:33,245 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:38,972 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=1 HTTP/1.1" 200 31496
+INFO 2026-07-19 06:54:39,349 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:40,913 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=1 HTTP/1.1" 200 31496
+INFO 2026-07-19 06:54:40,929 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:47,215 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=2 HTTP/1.1" 200 36603
+INFO 2026-07-19 06:54:47,591 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:52,690 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=4 HTTP/1.1" 200 18747
+INFO 2026-07-19 06:54:53,012 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:54,219 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=3 HTTP/1.1" 200 18747
+INFO 2026-07-19 06:54:54,535 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:54:55,581 [basehttp] "GET /admin/technical_logbook/taskrequiredpart/?car_model__id__exact=1 HTTP/1.1" 200 31496
+INFO 2026-07-19 06:54:55,590 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:55:21,011 [basehttp] "GET /admin/technical_logbook/maintenancepackage/ HTTP/1.1" 200 23180
+INFO 2026-07-19 06:55:21,331 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:55:25,639 [basehttp] "GET /admin/technical_logbook/maintenancetask/ HTTP/1.1" 200 43363
+INFO 2026-07-19 06:55:26,016 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:55:41,505 [basehttp] "GET /admin/technical_logbook/carsystem/ HTTP/1.1" 200 20432
+INFO 2026-07-19 06:55:41,823 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:55:44,612 [basehttp] "GET /admin/technical_logbook/usedpart/ HTTP/1.1" 200 61906
+INFO 2026-07-19 06:55:44,632 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 06:56:14,291 [basehttp] "GET /admin/technical_logbook/maintenancecycle/ HTTP/1.1" 200 20484
+INFO 2026-07-19 06:56:14,616 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2026-07-19 13:34:32,336 [basehttp] "OPTIONS /api/cars/ HTTP/1.1" 200 0
+WARNING 2026-07-19 13:34:32,342 [log] Unauthorized: /api/cars/
+WARNING 2026-07-19 13:34:32,342 [basehttp] "GET /api/cars/ HTTP/1.1" 401 226
+INFO 2026-07-19 13:34:32,345 [basehttp] "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:32,355 [basehttp] "POST /api/token/refresh/ HTTP/1.1" 200 489
+INFO 2026-07-19 13:34:32,369 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-19 13:34:34,409 [basehttp] "OPTIONS /api/cars/1/ HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:34,422 [basehttp] "GET /api/cars/1/ HTTP/1.1" 200 232
+INFO 2026-07-19 13:34:34,425 [basehttp] "OPTIONS /api/cars/1/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:34,461 [basehttp] "GET /api/cars/1/forecast/ HTTP/1.1" 200 2511
+INFO 2026-07-19 13:34:34,463 [basehttp] "OPTIONS /api/records/?car=1 HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:34,521 [basehttp] "GET /api/records/?car=1 HTTP/1.1" 200 21628
+INFO 2026-07-19 13:34:49,998 [basehttp] "GET /api/cars/ HTTP/1.1" 200 873
+INFO 2026-07-19 13:34:51,088 [basehttp] "OPTIONS /api/cars/2/ HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:51,102 [basehttp] "GET /api/cars/2/ HTTP/1.1" 200 231
+INFO 2026-07-19 13:34:51,105 [basehttp] "OPTIONS /api/cars/2/forecast/ HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:51,140 [basehttp] "GET /api/cars/2/forecast/ HTTP/1.1" 200 2525
+INFO 2026-07-19 13:34:51,143 [basehttp] "OPTIONS /api/records/?car=2 HTTP/1.1" 200 0
+INFO 2026-07-19 13:34:51,194 [basehttp] "GET /api/records/?car=2 HTTP/1.1" 200 20115
+INFO 2026-07-19 13:36:01,343 [basehttp] "GET /admin/technical_logbook/maintenancetask/ HTTP/1.1" 200 43363
+INFO 2026-07-19 13:36:01,732 [basehttp] "GET /admin/jsi18n/ HTTP/1.1" 200 17546
